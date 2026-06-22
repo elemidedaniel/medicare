@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import EmergencyButton from "./components/layout/EmergencyButton";
+import ChatBox from "./components/layout/ChatBox";
 import ScrollToTop from "./components/layout/ScrollToTop";
 
 import HomePage from "./pages/HomePage";
@@ -31,6 +32,7 @@ export default function App() {
         </main>
         <Footer />
         <EmergencyButton />
+        <ChatBox />
       </div>
     </BrowserRouter>
   );
