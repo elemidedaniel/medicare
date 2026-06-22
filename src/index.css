@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand Colors ── */
+  --color-primary: #0E5E5A;        /* deep clinical teal — main brand color */
+  --color-primary-dark: #0A4744;   /* hover states, headers */
+  --color-primary-light: #16847E;  /* accents, links */
+
+  --color-mint: #E8F5F3;           /* soft section backgrounds */
+  --color-mint-deep: #D3EBE7;      /* cards on mint bg */
+
+  --color-warm: #FCFBF9;           /* warm white — main page background */
+  --color-charcoal: #1A2B2A;       /* primary text */
+  --color-slate: #5C6B6A;          /* secondary/muted text */
+
+  --color-coral: #E8604C;          /* urgent CTAs — book now, emergency */
+  --color-coral-dark: #D14A36;     /* coral hover */
+
+  --color-gold: #C9A158;           /* premium accent — used very sparingly */
+
+  --color-border: #E2E8E6;         /* hairline borders */
+
+  /* ── Typography ── */
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  background-color: var(--color-warm);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Smooth scroll for anchor nav */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus visibility - accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
